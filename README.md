@@ -7,16 +7,25 @@ Using SEEED products (reTerminal E1001 and XIAO ePaper Board EE04) to create var
 4. You will also need to add the following libraries to your IDE:
 
 #include <ArduinoJson.h>  // https://github.com/bblanchon/ArduinoJson needs version v6 or above
+
 #include <WiFi.h>         // Built-in
+
 #include <WiFiClient.h>
+
 #include <HTTPClient.h>
+
 #include "owm_credentials.h"  // See 'owm_credentials' tab and enter your OWM API key and set the WiFi SSID and PASSWORD
+
 #include "common.h"
+
 #include "lang.h"  // Localisation (English)
+
 #include <time.h>  // Built-in
+
 #include <SPI.h>   // Built-in
-#define ENABLE_GxEPD2_display 0
+
 #include <GxEPD2_BW.h>
+
 #include <U8g2_for_Adafruit_GFX.h>
 
 The [reTerminal E1001](https://www.seeedstudio.com/reTerminal-E1001-p-6534.html) has a Green button, press this to refresh the display should you require the current forecast from the last refresh, typically made on the hour (07:00, 08:00...23:00).
