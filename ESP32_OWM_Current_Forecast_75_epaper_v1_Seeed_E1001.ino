@@ -190,6 +190,7 @@ void DisplayMainWeatherSection(int x, int y) {
   // The day will start with partly cloudy through the late morning hours, transitioning to rain
   // The day will start with partly cloudy through the late morning hours, transitioning to clearing
   // You can expect clear sky in the morning, with partly cloudy in the afternoon
+  // You can expect partly cloudy in the morning, with clearing in the afternoon
   // Expect a day of partly cloudy with rain
   // Expect a day that is partly cloudy with rain
   // There will be partly cloudy today
@@ -202,6 +203,7 @@ void DisplayMainWeatherSection(int x, int y) {
   Daily[0].Description.replace("of", "that is");
   Daily[0].Description.replace("with partly", "partly");
   Daily[0].Description.replace("with clearing", "then clearing");
+  Daily[0].Description.replace(", partly", ", then partly");
   String Line1, Line2, Line3;
   WordWrap(Daily[0].Description, Line1, Line2, Line3, 49);
   if (Line2.length() == 0) drawString(x + 95, y + 50, Line1, LEFT);
@@ -1089,3 +1091,4 @@ void InitialiseDisplay() {
   display.fillScreen(GxEPD_WHITE);
   display.setFullWindow();
 }
+
