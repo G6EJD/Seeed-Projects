@@ -44,3 +44,7 @@ reTerminal E1001
 
 For language files see here: https://github.com/G6EJD/ESP32-e-Paper-Weather-Display/tree/master/src
 
+How to upload a compiled image when the EN04 / ESP32S3 is in sleep mode:
+At the 3/4 compilation stage press the reset button.
+
+![alt text width="600"](/images/reset.jpg)
